@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;    
+            text-decoration: none;        
+        }
+        .container {
+            /* background-color: red; */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("http://192.168.252.212:8981/aplus_test/ui/_resource_/_images_/default/aplus_background.jpg"); /* url("./../resources/images/aplus_background.jpg"); */
+            background-size: cover;
+        }
+
+        .login_box {
+            /* background-color: blue; */
+            width: 400px;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .login_info_box {
+            /* background-color: green; */
+            width: 80%;
+            height: 70%;
+            min-width: 400px;
+        }
+        .form_box {
+            margin-top: 60px;
+        }
+        .form_box * {
+            display: block;
+            width: 80%;            
+            margin: 10px auto 10px auto;
+            padding: 10px;
+        }
+        .logo {
+            background-image: url(http://192.168.252.212:8981/aplus_test/ui/_resource_/_theme_/aplus/images/login_logo_pc.png); /* url("./../resources/images/aplus_background_bottom.png"); */
+            background-size: cover;
+            height: 70px;
+        }
+        .btn_type1 {
+            background-color: #3d3dbf;
+            color: #fff;
+            width: 86%;
+            border: none;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        .pw_change {
+            font-size: 10px;
+            height: 10px;
+            text-align: center;
+        }
+    </style>
+    
+    <script>
+        // function transaction() {
+        //     const inpust = document.querySelectorAll('.form_box input');
+        //     const json = {};
+
+        //     inpust.forEach((e) => json[e.name] = e.value);
+
+        //     await fetch("/login_post", {
+        //         body: JSON.stringify(json)
+        //         }).then((response) => console.log(response)); 
+        // }
+     
+    </script>
+
+    <div class="container">
+        <div class="login_box">
+            <div class="login_info_box">
+                <div class="log_box">
+                    <h1 class="logo"><a href=""></a></h1>
+                </div>
+                <form action="/login_post" method="post">
+                    <div class="form_box">
+                        <input type="text" name="USER_IDXX" placeholder="id">
+                        <input type="text" name="PASSWORD" placeholder="pw">
+                        <!-- <button class="btn_type1" onclick="transaction();">로그인</button> -->
+                        <button class="btn_type1" type="submit">로그인</button>
+                        <a class="pw_change" href="">비밀번호 변경</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
