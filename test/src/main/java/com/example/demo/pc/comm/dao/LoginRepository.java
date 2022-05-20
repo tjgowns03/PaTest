@@ -12,18 +12,22 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.pc.comm.vo.UserInfo;
 
 @Repository("LoginDao")
-public class LoginDao{
+public class LoginRepository{
 	
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
 	
 	//private final String log = "";
 	
-	public UserInfo Login() {
+	public UserInfo getUserId(String userId) {
+		
 		UserInfo us = new UserInfo();		
-		us.setUSER_IDXX("admin");
+		us.setUSER_IDXX(userId);
 		
 		return sqlSessionTemplate.selectOne("Login.SelectUser",us);
 	}
+	
+	
+	
 	
 }

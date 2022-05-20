@@ -8,7 +8,7 @@ import javax.websocket.server.ServerEndpoint;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.pc.comm.dao.LoginDao;
+import com.example.demo.pc.comm.dao.LoginRepository;
 import com.example.demo.pc.comm.service.LoginService;
 import com.example.demo.pc.comm.vo.UserInfo;
 
@@ -16,12 +16,12 @@ import com.example.demo.pc.comm.vo.UserInfo;
 public class LoginserviceImpl implements LoginService {
 
 	@Resource(name =  "LoginDao")
-	private LoginDao loginDao;
+	private LoginRepository loginDao;
 	
 	@Override
 	public UserInfo processLogin(Map<String, Object> searchVo, HttpServletRequest request) {
 		
-		return loginDao.Login();
+		return loginDao.getUserId("admin");
 	}
 
 }

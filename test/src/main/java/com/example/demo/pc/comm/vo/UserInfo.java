@@ -13,7 +13,6 @@ import lombok.ToString;
 public class UserInfo {
 	
 	private String USER_IDXX;
-	private String PASSWORD;
 	private String SCRT_NUMB;
 	private String USDN_CODE;
 	private String EMPL_NUMB;

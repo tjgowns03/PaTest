@@ -5,7 +5,16 @@
  
     <select id="SelectUser" resultType="com.example.demo.pc.comm.vo.UserInfo">;
         SELECT
-			*
+			USER_IDXX            
+			,SCRT_NUMB            
+			,USDN_CODE            
+			,EMPL_NUMB            
+			,USER_NAME            
+			,DEPT_CODE            
+			,CUST_CODE            
+			,USEX_YSNO            
+			,REMK_100X            
+			,INST_USID            
 		FROM
 			TM_USERXM
 		WHERE USER_IDXX = #{USER_IDXX}
