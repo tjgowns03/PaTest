@@ -11,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.pc.comm.service.LoginService;
 import com.example.demo.pc.comm.vo.UserInfo;
@@ -21,7 +19,7 @@ import com.example.demo.pc.comm.vo.UserInfo;
 public class LoginContoller {
 	
 	@Resource(name="LoginService")
-    private LoginService service;
+    private LoginService service; 
 	
 	//회원가입시 비밀번호를 인코딩 해줘야 회원가입이 가능하다.
 	@Autowired
